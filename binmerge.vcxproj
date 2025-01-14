@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{A02C1188-4F6E-4F22-82F7-341A6EB786C2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>binmerge</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>pdb/raw_pdb</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>pdb/raw_pdb/src</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ShowProgress>LinkVerbose</ShowProgress>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="binmerge.cpp" />
+    <ClCompile Include="pdb\mapped_file.cpp" />
+    <ClCompile Include="pdb\pdbparse_rawpdb_main.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleContributions.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleFunctionSymbols.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleFunctionVariables.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleLines.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleMain.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleMemoryMappedFile.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExamplePDBSize.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleSymbols.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\Examples_PCH.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleTimedScope.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleTypes.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\Examples\ExampleTypeTable.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_CoalescedMSFStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_DBIStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_DBITypes.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_DirectMSFStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_GlobalSymbolStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_ImageSectionStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_InfoStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_IPIStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_ModuleInfoStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_ModuleLineStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_ModuleSymbolStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_NamesStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_PCH.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_PublicSymbolStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_RawFile.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_SectionContributionStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_SourceFileStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_TPIStream.cpp" />
+    <ClCompile Include="pdb\raw_pdb\src\PDB_Types.cpp" />
+    <ClCompile Include="pdb\typetable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pdb\raw_pdb\.gitignore" />
+    <Content Include="pdb\raw_pdb\.git\config" />
+    <Content Include="pdb\raw_pdb\.git\description" />
+    <Content Include="pdb\raw_pdb\.git\HEAD" />
+    <Content Include="pdb\raw_pdb\.git\hooks\applypatch-msg.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\commit-msg.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\fsmonitor-watchman.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\post-update.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\pre-applypatch.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\pre-commit.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\pre-merge-commit.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\pre-push.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\pre-rebase.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\pre-receive.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\push-to-checkout.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\sendemail-validate.sample" />
+    <Content Include="pdb\raw_pdb\.git\hooks\update.sample" />
+    <Content Include="pdb\raw_pdb\.git\index" />
+    <Content Include="pdb\raw_pdb\.git\info\exclude" />
+    <Content Include="pdb\raw_pdb\.git\logs\HEAD" />
+    <Content Include="pdb\raw_pdb\.git\logs\refs\heads\main" />
+    <Content Include="pdb\raw_pdb\.git\logs\refs\remotes\origin\HEAD" />
+    <Content Include="pdb\raw_pdb\.git\objects\pack\pack-ab95243a4486d07ac2940601e0a57aaa7f0a90ed.idx" />
+    <Content Include="pdb\raw_pdb\.git\objects\pack\pack-ab95243a4486d07ac2940601e0a57aaa7f0a90ed.pack" />
+    <Content Include="pdb\raw_pdb\.git\objects\pack\pack-ab95243a4486d07ac2940601e0a57aaa7f0a90ed.rev" />
+    <Content Include="pdb\raw_pdb\.git\packed-refs" />
+    <Content Include="pdb\raw_pdb\.git\refs\heads\main" />
+    <Content Include="pdb\raw_pdb\.git\refs\remotes\origin\HEAD" />
+    <Content Include="pdb\raw_pdb\build\Examples.vcxproj" />
+    <Content Include="pdb\raw_pdb\build\Examples.vcxproj.filters" />
+    <Content Include="pdb\raw_pdb\build\RawPDB.sln" />
+    <Content Include="pdb\raw_pdb\build\RawPDB.vcxproj" />
+    <Content Include="pdb\raw_pdb\build\RawPDB.vcxproj.filters" />
+    <Content Include="pdb\raw_pdb\CMakeLists.txt" />
+    <Content Include="pdb\raw_pdb\LICENSE" />
+    <Content Include="pdb\raw_pdb\README.md" />
+    <Content Include="pdb\raw_pdb\src\CMakeLists.txt" />
+    <Content Include="pdb\raw_pdb\src\Examples\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="pdb\raw_pdb\raw_pdb.natvis" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pdb\raw_pdb\.git\objects\info\" />
+    <Folder Include="pdb\raw_pdb\.git\refs\tags\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pdb\mapped_file.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Examples\ExampleMemoryMappedFile.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Examples\Examples_PCH.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Examples\ExampleTimedScope.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Examples\ExampleTypeTable.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_ArrayView.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_Assert.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_BitOperators.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_BitUtil.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_DisableWarningsPop.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_DisableWarningsPush.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_Forward.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_Log.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_Macros.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_Memory.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_Move.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_Platform.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_PointerUtil.h" />
+    <ClInclude Include="pdb\raw_pdb\src\Foundation\PDB_Warnings.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_CoalescedMSFStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_DBIStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_DBITypes.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_DirectMSFStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_ErrorCodes.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_GlobalSymbolStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_ImageSectionStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_InfoStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_IPIStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_IPITypes.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_ModuleInfoStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_ModuleLineStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_ModuleSymbolStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_NamesStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_PCH.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_PublicSymbolStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_RawFile.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_SectionContributionStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_SourceFileStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_TPIStream.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_TPITypes.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_Types.h" />
+    <ClInclude Include="pdb\raw_pdb\src\PDB_Util.h" />
+    <ClInclude Include="pdb\typetable.h" />
+    <ClInclude Include="type_enumeration.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
