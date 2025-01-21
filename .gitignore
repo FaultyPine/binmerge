@@ -1,0 +1,10 @@
+*.DotSettings.user
+*.exe
+*.pdb
+*.tlog
+*.obj
+*.idb
+*.ilk
+*.recipe
+
+.idea
