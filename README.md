@@ -28,20 +28,42 @@ merge/diff hardcoded binary file format
 hardcoded format -> merge/diff based on some sort of "file format spec"
 derive the "file format spec" from program debug info
 
+another possible (much simpler) approach would be to have the merge granularity be at a "struct" level, rather than field level
+so two changes to the *same depth* struct cannot be merged.
+but if you had
+struct Data
+{
+    int y;
+    struct SubData
+    {
+        int x;
+    }
+    SubData subdata;
+}
+Someone can make changes to "y" and to data inside "subdata" independently without affecting each other. Merges would always be correct with this approach.
 
+
+
+perforce integration:
+%1 source (theirs)
+%2 destination (yours)
+%b base
+%r result
 
 
 Resources:
 
-https://www.guiffy.com/SureMergeWP.html "Bill Ritcher's excellent paper "A Trustworthy 3-Way Merge" talks about some of the common gotchas with three way merging and clever solutions to them that commercial SCM packages have used."
+"Bill Ritcher's excellent paper "A Trustworthy 3-Way Merge" talks about some of the common gotchas with three way merging and clever solutions to them that commercial SCM packages have used."
+https://www.guiffy.com/SureMergeWP.html
+
 
 There's a formal analysis of the diff3 algorithm, with pseudocode, in this paper: http://www.cis.upenn.edu/~bcpierce/papers/diff3-short.pdf
 It is titled "A Formal Investigation of Diff3" and written by Sanjeev Khanna, Keshav Kunal, and Benjamin C. Pierce from Yahoo.
 
 
-
+https://github.com/jmacd/xdelta/tree/release3_1_apl/xdelta3
 https://meta-diff.sourceforge.net/
-https://github.com/jam1garner/binrw
+https://github.com/jam1garner/binrw // example of a good simple user-facing api. Just define your struct and that's it.
 https://homes.cs.washington.edu/~mernst/pubs/merge-evaluation-ase2024.pdf
 https://github.com/GumTreeDiff/gumtree
 
